@@ -60,7 +60,7 @@ public abstract class InfiniteListView extends ListView {
         @Override
         public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 
-            boolean loadMore = (totalItemCount != 0) && needLoad(firstVisibleItem, visibleItemCount);//firstVisibleItem + visibleItemCount >= totalItemCount);
+            boolean loadMore = (totalItemCount != 0) && needLoad(firstVisibleItem, visibleItemCount);
 
             if (!isLoading && loadMore) {
                 if (onLoadDataListener != null) {
